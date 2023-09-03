@@ -1,25 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"log"
+
+	"github.com/leepereira/myprogram/helpers"
+)
 
 func main() {
-	fmt.Println("Hello")
-
-	var whatToSay string
-
-	whatToSay = "Hello Leon"
-	var i int
-
-	fmt.Println(whatToSay)
-
-	i = 7
-
-	fmt.Println("i is set to", i)
-
-	whatWasSaid, whatElse := saySomething()
-	fmt.Println(whatWasSaid, whatElse)
-}
-
-func saySomething() (string, string) {
-	return "something", "alsosomething"
+	log.Println("Hello")
+	var myVar helpers.SomeType
+	myVar.TypeName = "Leon Pereira"
+	log.Println(myVar.TypeName)
 }
