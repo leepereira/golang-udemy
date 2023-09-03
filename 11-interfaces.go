@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type Animal interface {
+type Animal2 interface {
 	Says() string
 	NumberOfLegs() int
 }
@@ -36,7 +36,7 @@ func main() {
 
 }
 
-func PrintInfo(a Animal) {
+func PrintInfo(a Animal2) {
 	fmt.Println("This animal says", a.Says(), "and has ", a.NumberOfLegs(), "legs")
 }
 
