@@ -1,9 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type PereiraCars interface {
-	Mileage() float64
+	PereiraCarMileage() float64
 }
 
 type Honda struct {
@@ -23,11 +25,11 @@ type Tesla struct {
 // these are the methods that are created
 // here h is the receiver and it is associated with the type (Honda in this case) that the method Mileage is associated with
 // func (receiver) method() return
-func (h Honda) Mileage() float64 {
+func (h Honda) PereiraCarMileage() float64 {
 	return h.distance / h.fuel
 }
 
-func (t Tesla) Mileage() float64 {
+func (t Tesla) PereiraCarMileage() float64 {
 	return t.distance / t.charge
 }
 
@@ -38,10 +40,11 @@ func (t Tesla) Mileage() float64 {
 // that implement the PereiraCars interface
 // as an argument when calling totalMileage
 // this function iterates over the slice : [{310.94 18 80} {310 95}]
-func totalMileage(m []PereiraCars) {
+func totalMileage(m []PereiraCars) { //[{310.94 18 80} {310 95}]
 	tm := 0.0
+	// var indexleon int
 	for _, v := range m {
-		tm = tm + v.Mileage()
+		tm = tm + v.PereiraCarMileage()
 	}
 	fmt.Println("Total Mileage / month ", tm)
 }
