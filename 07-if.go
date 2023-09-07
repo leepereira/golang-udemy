@@ -1,6 +1,9 @@
 package main
 
-import "log"
+import (
+	"fmt"
+	"log"
+)
 
 func main() {
 
@@ -17,5 +20,7 @@ func main() {
 		log.Println("OR condition tested")
 	} else if x == 11 {
 		log.Println("x is 11")
+	} else {
+		fmt.Println("this is a default message")
 	}
 }
