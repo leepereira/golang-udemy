@@ -1,23 +1,20 @@
 package main
 
-import "log"
+import (
+	"fmt"
+	"runtime"
+)
 
 func main() {
-	whoisFamily := "Martin"
-
-	switch whoisFamily {
-	case "Leon":
-		log.Println("family member is set to Leon")
-	case "Grinal":
-		log.Println("family member is set to Grinal")
-	case "Chelsea":
-		log.Println("family member is set to Chelsea")
-	case "Hayden":
-		log.Println("family member is set to Hayden")
-
+	fmt.Print("Go runs on ")
+	switch os := runtime.GOOS; os {
+	case "darwin":
+		fmt.Println("OS X.")
+	case "linux":
+		fmt.Println("Linux.")
 	default:
-		log.Println("Not a part of Pereira family")
-
+		// freebsd, openbsd,
+		// plan9, windows...
+		fmt.Printf("%s.\n", os)
 	}
-
 }
