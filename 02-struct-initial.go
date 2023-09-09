@@ -16,6 +16,7 @@ type wheel struct {
 }
 
 func main() {
+	//defining a struct
 	myCar := car{}
 	myCar.FrontWheel.Radius = 30
 	myCar.Make = "Tesla"
