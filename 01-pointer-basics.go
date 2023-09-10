@@ -14,6 +14,6 @@ func main() {
 	fmt.Println(*p) // read i through the pointer p : 42
 	*p = 21         // set i through the pointer p
 	fmt.Println(p)  // 0xc000012028
-	fmt.Println(i)  // 21
+	fmt.Println(i)  // 21  //This is known as "dereferencing" or "indirecting".
 
 }
